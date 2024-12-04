@@ -1,6 +1,6 @@
 /* General styles for contact button */
 .contact-section {
-    position: absolute;
+    position: fixed; /* Fixed position on screen */
     top: 10px;
     right: 10px;
     z-index: 10;
@@ -48,11 +48,22 @@ h1 {
     margin-top: 10px;
 }
 
+/* Background for the entire site */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Add your desired background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed */
+}
+
 /* Container, gallery, and other sections */
 .container {
     position: relative;
-    font-family: Arial, sans-serif;
     margin-top: 120px; /* Space for fixed header */
+    padding: 20px;
 }
 
 .gallery {
