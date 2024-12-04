@@ -39,6 +39,14 @@
                     <p class="feature-description">Easily convert over 100 audio files at once, saving you time and effort.</p>
                 </div>
             </div>
+
+            <!-- New Feature Box: Solo Dev -->
+            <div class="feature-box">
+                <div class="feature-card" onclick="showSoloDevMessage()">
+                    <h3>Solo Dev</h3>
+                    <p class="feature-description">A personal message from the creator</p>
+                </div>
+            </div>
         </section>
 
         <!-- Presets Section (Hidden initially, revealed when feature box clicked) -->
@@ -62,6 +70,12 @@
                 <li onclick="showMultipleFilesDescription('multiple-files')">Batch Conversion (More than 100 files)</li>
             </ul>
             <div id="multiple-files-description"></div>
+        </section>
+
+        <!-- Solo Dev Message Section (Hidden initially, revealed when clicked) -->
+        <section id="solo-dev-message" class="solo-dev-message" style="display: none;">
+            <h3>A Sweet Message from the Creator</h3>
+            <p>Thank you for using the Audio Converter App! Your support means the world to me. As a solo developer, I put my heart into creating this app, and I hope it helps you convert your audio files with ease. Enjoy, and feel free to reach out if you have any suggestions or feedback. Stay awesome!</p>
         </section>
 
         <!-- Call to Action Section -->
