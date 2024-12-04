@@ -25,36 +25,17 @@
         <section class="features">
             <h2>Key Features</h2>
             <div class="feature-box">
-                <div class="feature-card">
+                <div class="feature-card" onclick="showModal('audio-quality')">
                     <h3>Best Audio Quality</h3>
                     <p class="feature-description">Get the highest quality audio with the slowest encoding speed.</p>
-                    <ul class="more-info">
-                        <li>Perfect for high-fidelity sound</li>
-                        <li>Slow conversion speed</li>
-                        <li>Best for audiophiles</li>
-                    </ul>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" onclick="showModal('fast-conversion')">
                     <h3>Fast Conversion</h3>
                     <p class="feature-description">Convert files quickly with good balance between speed and quality.</p>
-                    <ul class="more-info">
-                        <li>Great for quick conversions</li>
-                        <li>Moderate quality</li>
-                        <li>Perfect for casual use</li>
-                    </ul>
                 </div>
-                <div class="feature-card multiple-formats">
+                <div class="feature-card" onclick="showModal('multiple-formats')">
                     <h3>Multiple Formats</h3>
                     <p class="feature-description">Convert between various audio formats, including MP3, FLAC, WAV, and more.</p>
-                    <ul class="format-list">
-                        <li>MP3</li>
-                        <li>FLAC</li>
-                        <li>WAV</li>
-                        <li>AAC</li>
-                        <li>OGG</li>
-                        <li>AIFF</li>
-                        <li>Opus</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -64,6 +45,50 @@
             <h2>Ready to get started?</h2>
             <button onclick="showAlert()">Download Now</button>
         </section>
+    </div>
+
+    <!-- Modal Popups -->
+    <div id="audio-quality-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('audio-quality')">&times;</span>
+            <h3>Best Audio Quality</h3>
+            <p>For the best audio quality, choose the "Best Audio Quality" option. This will result in the slowest conversion speed but will provide superior fidelity.</p>
+            <ul>
+                <li>Perfect for high-fidelity sound</li>
+                <li>Slow conversion speed</li>
+                <li>Best for audiophiles</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="fast-conversion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('fast-conversion')">&times;</span>
+            <h3>Fast Conversion</h3>
+            <p>For fast conversions, use the "Fast Conversion" option. This will offer a good balance between speed and quality, making it ideal for quick tasks.</p>
+            <ul>
+                <li>Moderate quality</li>
+                <li>Fast conversion speed</li>
+                <li>Ideal for casual use</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="multiple-formats-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('multiple-formats')">&times;</span>
+            <h3>Multiple Formats</h3>
+            <p>This feature allows conversion between a wide variety of audio formats. Whether you're working with MP3, FLAC, or WAV, we've got you covered.</p>
+            <ul>
+                <li>MP3</li>
+                <li>FLAC</li>
+                <li>WAV</li>
+                <li>AAC</li>
+                <li>OGG</li>
+                <li>AIFF</li>
+                <li>Opus</li>
+            </ul>
+        </div>
     </div>
 
     <script src="scripts.js"></script>
