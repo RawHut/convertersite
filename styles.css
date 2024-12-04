@@ -67,7 +67,6 @@ nav ul li a:hover {
 #hero .hero-content h1 {
   font-size: 50px;
   margin-bottom: 20px;
-  animation: fadeIn 2s ease-in;
 }
 
 #hero .cta-button {
@@ -96,11 +95,6 @@ nav ul li a:hover {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.app-image:hover {
-  transform: scale(1.05);
 }
 
 /* Features Section */
@@ -124,12 +118,6 @@ nav ul li a:hover {
   padding: 20px;
   text-align: center;
   width: 250px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  background-color: #444;
 }
 
 /* Presets Section */
@@ -137,6 +125,12 @@ nav ul li a:hover {
   background-color: #1f1f1f;
   padding: 60px 20px;
   text-align: center;
+}
+
+#presets h2 {
+  color: #ffcc00;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .preset-container {
@@ -147,15 +141,33 @@ nav ul li a:hover {
 
 .preset-card {
   background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s;
+  text-align: center;
+  border-radius: 8px;
 }
 
-.preset-card:hover {
-  transform: scale(1.05);
-  background-color: #444;
+.preset-card h3 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.preset-card p {
+  font-size: 16px;
+  color: #eaeaea;
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about p {
+  font-size: 18px;
+  color: #eaeaea;
 }
 
 /* Contact Section */
@@ -167,13 +179,23 @@ nav ul li a:hover {
 
 #contact p {
   font-size: 18px;
+  color: #eaeaea;
+}
+
+#contact a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #ff9933;
 }
 
 /* Footer */
 footer {
   background-color: #121212;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
   color: #eaeaea;
 }
 
@@ -182,14 +204,4 @@ footer {
   bottom: 10px;
   right: 10px;
   z-index: 100;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
