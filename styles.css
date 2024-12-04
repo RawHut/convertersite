@@ -129,6 +129,24 @@ header .subheading {
     font-style: italic;
 }
 
+/* Multiple Files Conversion Section */
+.multiple-files-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.multiple-files-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.multiple-files-section li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 /* Call to Action Section */
 .cta {
     text-align: center;
