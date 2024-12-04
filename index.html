@@ -25,102 +25,33 @@
         <section class="features">
             <h2>Key Features</h2>
             <div class="feature-box">
-                <div class="feature-card" onclick="showModal('audio-quality')">
-                    <h3>Best Audio Quality</h3>
-                    <p class="feature-description">Get the highest quality audio with the best* encoding speed.</p>
-                </div>
-                <div class="feature-card" onclick="showModal('fast-conversion')">
-                    <h3>Fast Conversion</h3>
-                    <p class="feature-description">Convert files quickly with good balance between speed and quality.</p>
-                </div>
-                <div class="feature-card" onclick="showModal('multiple-formats')">
-                    <h3>Multiple Formats</h3>
-                    <p class="feature-description">Convert between various audio formats, including MP3 , FLAC , WAV , WMA , AAC , OGG , AIFF , Opus and more.</p>
-                </div>
-                <div class="feature-card" onclick="showModal('batch-conversion')">
-                    <h3>Batch Conversion</h3>
-                    <p class="feature-description">Convert hundreds of audio files at once to save time.</p>
+                <!-- New Feature Box: Best Audio Quality With Best Speed -->
+                <div class="feature-card" onclick="showPresetDetails()">
+                    <h3>Best Audio Quality With Best Speed Available</h3>
+                    <p class="feature-description">Choose from presets for the best audio, speed, and balance for your audio files.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Dropdown for Conversion Presets -->
-        <section class="conversion-preset">
-            <h2>Conversion Preset</h2>
-            <select id="preset-dropdown" onchange="showPresetDescription()">
-                <option value="none" selected>Select a preset</option>
-                <option value="veryslow">Best Audio Quality (veryslow)</option>
-                <option value="slow">High Quality (slow)</option>
-                <option value="medium">Balanced (medium)</option>
-                <option value="fast">Faster Conversion (fast)</option>
-                <option value="faster">Very Fast Conversion (faster)</option>
-                <option value="ultrafast">Fast Conversion (ultrafast)</option>
-            </select>
-            <p id="preset-description">Please select a speed option from the dropdown.</p>
+        <!-- Presets Section (Hidden initially, revealed when feature box clicked) -->
+        <section id="preset-section" class="preset-section" style="display: none;">
+            <h3>Conversion Presets</h3>
+            <ul>
+                <li onclick="showPresetDescription('veryslow')">Best Audio Quality (veryslow)</li>
+                <li onclick="showPresetDescription('slow')">High Quality (slow)</li>
+                <li onclick="showPresetDescription('medium')">Balanced (medium)</li>
+                <li onclick="showPresetDescription('fast')">Faster Conversion (fast)</li>
+                <li onclick="showPresetDescription('faster')">Very Fast Conversion (faster)</li>
+                <li onclick="showPresetDescription('ultrafast')">Fast Conversion (ultrafast)</li>
+            </ul>
+            <div id="preset-description"></div>
         </section>
 
-        <!-- Call to Action -->
+        <!-- Call to Action Section -->
         <section class="cta">
             <h2>Ready to get started?</h2>
             <button onclick="showAlert()">Download Now</button>
         </section>
-    </div>
-
-    <!-- Modal Popups -->
-    <div id="audio-quality-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('audio-quality')">&times;</span>
-            <h3>Best Audio Quality</h3>
-            <p>For the best audio quality, choose the "Best Audio Quality" option. This will result in the slowest conversion speed but will provide superior fidelity.</p>
-            <ul>
-                <li>Perfect for high-fidelity sound</li>
-                <li>Slow conversion speed</li>
-                <li>Best for audiophiles</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="fast-conversion-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('fast-conversion')">&times;</span>
-            <h3>Fast Conversion</h3>
-            <p>For fast conversions, use the "Fast Conversion" option. This will offer a good balance between speed and quality, making it ideal for quick tasks.</p>
-            <ul>
-                <li>Moderate quality</li>
-                <li>Fast conversion speed</li>
-                <li>Ideal for casual use</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="multiple-formats-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('multiple-formats')">&times;</span>
-            <h3>Multiple Formats</h3>
-            <p>This feature allows conversion between a wide variety of audio formats. Whether you're working with MP3, FLAC, or WAV, we've got you covered.</p>
-            <ul>
-                <li>MP3</li>
-                <li>FLAC</li>
-                <li>WAV</li>
-                <li>AAC</li>
-                <li>OGG</li>
-                <li>AIFF</li>
-                <li>Opus</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="batch-conversion-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('batch-conversion')">&times;</span>
-            <h3>Batch Conversion</h3>
-            <p>This feature allows you to convert multiple audio files at the same time, making it easier and faster to handle large batches of audio files.</p>
-            <ul>
-                <li>Convert hundreds of files at once</li>
-                <li>Save time by processing multiple files simultaneously</li>
-                <li>Efficient for large audio libraries</li>
-            </ul>
-        </div>
     </div>
 
     <script src="scripts.js"></script>
