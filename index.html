@@ -31,6 +31,14 @@
                     <p class="feature-description">Choose from presets for the best audio, speed, and balance for your audio files.</p>
                 </div>
             </div>
+
+            <!-- New Feature Box: Multiple Files Conversion -->
+            <div class="feature-box">
+                <div class="feature-card" onclick="showMultipleFilesDetails()">
+                    <h3>Convert Multiple Files (More Than 100)</h3>
+                    <p class="feature-description">Easily convert over 100 audio files at once, saving you time and effort.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Presets Section (Hidden initially, revealed when feature box clicked) -->
@@ -45,6 +53,17 @@
                 <li onclick="showPresetDescription('ultrafast')">Fast Conversion (ultrafast)</li>
             </ul>
             <div id="preset-description"></div>
+        </section>
+
+        <!-- Multiple Files Conversion Section (Hidden initially, revealed when clicked) -->
+        <section id="multiple-files-section" class="multiple-files-section" style="display: none;">
+            <h3>Multiple Files Conversion</h3>
+            <p>With this feature, you can convert more than 100 audio files at once, streamlining your batch processing tasks. Whether you're converting a large collection of music or audio files for a project, this feature will save you significant time.</p>
+            <ul>
+                <li>Convert up to 100+ files simultaneously</li>
+                <li>Reduce manual effort and time spent</li>
+                <li>Perfect for large-scale audio projects</li>
+            </ul>
         </section>
 
         <!-- Call to Action Section -->
