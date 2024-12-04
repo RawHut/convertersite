@@ -1,34 +1,22 @@
-// Function to show preset info modal based on the selected preset
-function showPresetInfo() {
+// Function to show the description for the selected preset
+function showPresetDescription() {
     var presetDropdown = document.getElementById('preset-dropdown');
     var preset = presetDropdown.value;
+    var description = document.getElementById('preset-description');
 
-    // If the user selects 'none', do nothing
-    if (preset === "none") {
-        return;
+    if (preset === "veryslow") {
+        description.innerHTML = "Best Audio Quality (veryslow):<br>This preset provides the best audio quality with the slowest encoding time. The file size will be smaller and the quality will be top-notch, but the conversion will be slow.";
+    } else if (preset === "slow") {
+        description.innerHTML = "High Quality (slow):<br>This preset is still focused on high quality but with a faster encoding time than 'veryslow'. It provides excellent audio quality, though encoding will be slower than other options.";
+    } else if (preset === "medium") {
+        description.innerHTML = "Balanced (medium):<br>This is the default preset, providing a good balance between encoding speed and audio quality. It’s suitable for most scenarios where you need a fair balance between file size and quality.";
+    } else if (preset === "fast") {
+        description.innerHTML = "Faster Conversion (fast):<br>This preset sacrifices some quality for faster encoding times. The result will be faster, but the audio quality may suffer slightly.";
+    } else if (preset === "faster") {
+        description.innerHTML = "Very Fast Conversion (faster):<br>This preset is geared towards ultra-fast encoding. It’s suitable when speed is the top priority, but the quality will noticeably decrease.";
+    } else if (preset === "ultrafast") {
+        description.innerHTML = "Fast Conversion (ultrafast):<br>This preset will encode the audio as quickly as possible, but with significant quality loss. Use this option when encoding speed is a priority over quality.";
+    } else {
+        description.innerHTML = "Please select a speed option from the dropdown.";
     }
-
-    var modal = document.getElementById('preset-info-modal');
-    var title = document.getElementById('preset-info-title');
-    var description = document.getElementById('preset-info-description');
-
-    // Set the title and description based on the selected preset
-    if (preset === "best-quality") {
-        title.textContent = "Best Audio Quality";
-        description.textContent = "Choose this option for the highest audio fidelity. Ideal for audiophiles, but slow in conversion speed.";
-    } else if (preset === "fast-conversion") {
-        title.textContent = "Fast Conversion";
-        description.textContent = "Choose this option for fast conversions. Provides a good balance between speed and quality.";
-    } else if (preset === "batch-conversion") {
-        title.textContent = "Batch Conversion";
-        description.textContent = "Choose this option to convert hundreds of files simultaneously, saving time and effort.";
-    }
-
-    modal.style.display = "block";
-}
-
-// Function to close the modal
-function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "none";
 }
