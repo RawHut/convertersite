@@ -44,6 +44,17 @@
             </div>
         </section>
 
+        <!-- Dropdown for My Conversion Preset -->
+        <section class="conversion-preset">
+            <h2>My Conversion Preset</h2>
+            <select id="preset-dropdown" onchange="showPresetInfo()">
+                <option value="none" selected>Select a preset</option>
+                <option value="best-quality">Best Audio Quality</option>
+                <option value="fast-conversion">Fast Conversion</option>
+                <option value="batch-conversion">Batch Conversion</option>
+            </select>
+        </section>
+
         <!-- Call to Action -->
         <section class="cta">
             <h2>Ready to get started?</h2>
@@ -105,6 +116,15 @@
                 <li>Save time by processing multiple files simultaneously</li>
                 <li>Efficient for large audio libraries</li>
             </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Conversion Preset Info -->
+    <div id="preset-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('preset-info')">&times;</span>
+            <h3 id="preset-info-title">Preset Info</h3>
+            <p id="preset-info-description">Select a preset from the dropdown to view more details here.</p>
         </div>
     </div>
 
