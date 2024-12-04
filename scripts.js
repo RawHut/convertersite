@@ -1,6 +1,13 @@
 // Show the preset section when the feature box is clicked
 function showPresetDetails() {
     document.getElementById('preset-section').style.display = 'block';
+    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section if preset is clicked
+}
+
+// Show the Multiple Files Conversion section
+function showMultipleFilesDetails() {
+    document.getElementById('multiple-files-section').style.display = 'block';
+    document.getElementById('preset-section').style.display = 'none'; // Hide preset section if multiple files section is clicked
 }
 
 // Show the description of the selected preset
@@ -29,8 +36,9 @@ function showPresetDescription(preset) {
         description = "Fast Conversion (ultrafast):\n" +
                       "This preset will encode the audio as quickly as possible, but with significant quality loss. " +
                       "Use this option when encoding speed is a priority over quality.";
+    } else {
+        description = "Please select a speed option from the dropdown.";
     }
 
-    // Show the description of the selected preset
     document.getElementById('preset-description').textContent = description;
 }
