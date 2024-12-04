@@ -1,169 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Converter App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Format Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1>Audio Converter App</h1>
-            <p class="subheading">Convert audio files with ease and speed</p>
-        </header>
 
-        <!-- Contact Button (top right) -->
-        <div class="contact-btn">
-            <button onclick="window.location.href='contact.html'">Contact</button>
-        </div>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Audio Format Converter</div>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#presets">Presets</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Image Section -->
-        <section class="gallery">
-            <div class="image-container">
-                <img src="img1.jpg" alt="App Screenshot" class="gallery-image">
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Key Features</h2>
-            <div class="feature-box">
-                <div class="feature-card" onclick="showPresetDetails()">
-                    <h3>Best Audio Quality with Best Speed Available</h3>
-                    <p>This section shows presets for best quality and speed.</p>
-                </div>
-                <div class="feature-card" onclick="showMultipleFilesDetails()">
-                    <h3>Batch Conversion (100+ Files)</h3>
-                    <p>Convert multiple files at once, saving time!</p>
-                </div>
-                <div class="feature-card" onclick="showSoloDevMessage()">
-                    <h3>Message from Solo Dev</h3>
-                    <p>A special message just for you.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta">
-            <h2>Ready to get started?</h2>
-            <button onclick="window.location.href='download.html'">Download Now</button>
-        </section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Effortless Audio Format Conversion</h1>
+      <p>Convert over 100 files at once with flexible presets for every need.</p>
+      <a href="#get-started" class="cta-button">Get Started</a>
     </div>
+  </section>
 
-    <!-- Preset Details Section -->
-    <section id="preset-section" style="display:none;">
-        <h3>Preset Details</h3>
-        <p id="preset-description">Please select a preset to see the description.</p>
-    </section>
-
-    <!-- Multiple Files Conversion Section -->
-    <section id="multiple-files-section" style="display:none;">
-        <h3>Multiple Files Conversion</h3>
-        <p id="multiple-files-description">Please select an option to see the description.</p>
-    </section>
-
-    <!-- Solo Dev Message Section -->
-    <section id="solo-dev-message" style="display:none;">
-        <h3>Message from Solo Dev</h3>
-        <p>Thank you for using our app. We hope it helps you with your audio conversion needs!</p>
-    </section>
-
-    <!-- Modal Popup for Selecting Preset -->
-    <div id="preset-dropdown" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3>Select Preset</h3>
-            <select onchange="showPresetDescription(this.value)">
-                <option value="veryslow">Best Audio Quality (veryslow)</option>
-                <option value="slow">High Quality (slow)</option>
-                <option value="medium">Balanced (medium)</option>
-                <option value="fast">Faster Conversion (fast)</option>
-                <option value="faster">Very Fast Conversion (faster)</option>
-                <option value="ultrafast">Fast Conversion (ultrafast)</option>
-            </select>
-            <p id="preset-description">Select a preset to see the details.</p>
-        </div>
+  <!-- Features Section -->
+  <section id="features">
+    <div class="feature-container">
+      <div class="feature-card">
+        <h3>Convert 100+ Files</h3>
+        <p>Easily convert multiple files simultaneously, saving you time.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Multiple Audio Formats</h3>
+        <p>Supports MP3, WAV, FLAC, AAC, Opus, WMA, OGG, AIFF.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fast & Flexible Options</h3>
+        <p>Choose from multiple presets tailored for speed or quality.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Developed by a Solo Dev</h3>
+        <p>A passion project built by a dedicated solo developer.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Modal Popup for Batch Conversion -->
-    <div id="multiple-files-dropdown" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3>Select Batch Conversion Option</h3>
-            <p>Convert more than 100 files in a single batch. Select the batch conversion option for more details.</p>
-            <p id="multiple-files-description">Batch conversion allows you to convert multiple audio files at once, saving you time.</p>
-        </div>
+  <!-- Presets Section -->
+  <section id="presets">
+    <h2>Conversion Presets</h2>
+    <div class="preset-container">
+      <div class="preset-card">
+        <h3>Best Audio Quality (veryslow)</h3>
+        <p>This preset provides the best audio quality with the slowest encoding time.</p>
+      </div>
+      <div class="preset-card">
+        <h3>High Quality (slow)</h3>
+        <p>High quality with slower encoding, a great compromise.</p>
+      </div>
+      <div class="preset-card">
+        <h3>Balanced (medium)</h3>
+        <p>Perfect balance between speed and quality for most users.</p>
+      </div>
+      <div class="preset-card">
+        <h3>Faster Conversion (fast)</h3>
+        <p>Faster encoding, with slightly reduced audio quality.</p>
+      </div>
+      <div class="preset-card">
+        <h3>Very Fast Conversion (faster)</h3>
+        <p>Prioritize speed with noticeable quality loss.</p>
+      </div>
+      <div class="preset-card">
+        <h3>Fast Conversion (ultrafast)</h3>
+        <p>Ultra-fast encoding with significant quality loss, ideal for speed over quality.</p>
+      </div>
     </div>
+  </section>
 
-    <script>
-        // Show the preset section when the feature box is clicked
-        function showPresetDetails() {
-            document.getElementById('preset-section').style.display = 'block';
-            document.getElementById('multiple-files-section').style.display = 'none';
-            document.getElementById('solo-dev-message').style.display = 'none';
-        }
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Audio Format Converter is a passion project developed by a solo developer. It was created to make audio format conversion fast, easy, and flexible, with customizable options for any user's needs.</p>
+  </section>
 
-        // Show the Multiple Files Conversion section
-        function showMultipleFilesDetails() {
-            document.getElementById('multiple-files-section').style.display = 'block';
-            document.getElementById('preset-section').style.display = 'none';
-            document.getElementById('solo-dev-message').style.display = 'none';
-        }
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-        // Show the Solo Dev message when clicked
-        function showSoloDevMessage() {
-            document.getElementById('solo-dev-message').style.display = 'block';
-            document.getElementById('preset-section').style.display = 'none';
-            document.getElementById('multiple-files-section').style.display = 'none';
-        }
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Audio Format Converter. All rights reserved.</p>
+  </footer>
 
-        // Show the description of the selected preset
-        function showPresetDescription(preset) {
-            let description = '';
-
-            if (preset === 'veryslow') {
-                description = "Best Audio Quality (veryslow):\n" +
-                              "This preset provides the best audio quality with the slowest encoding time. The file size will be smaller and the quality will be top-notch, but the conversion will be slow.";
-            } else if (preset === 'slow') {
-                description = "High Quality (slow):\n" +
-                              "This preset is still focused on high quality but with a faster encoding time than 'veryslow'. It provides excellent audio quality, though encoding will be slower than other options.";
-            } else if (preset === 'medium') {
-                description = "Balanced (medium):\n" +
-                              "This is the default preset, providing a good balance between encoding speed and audio quality. It’s suitable for most scenarios where you need a fair balance between file size and quality.";
-            } else if (preset === 'fast') {
-                description = "Faster Conversion (fast):\n" +
-                              "This preset sacrifices some quality for faster encoding times. The result will be faster, but the audio quality may suffer slightly.";
-            } else if (preset === 'faster') {
-                description = "Very Fast Conversion (faster):\n" +
-                              "This preset is geared towards ultra-fast encoding. It’s suitable when speed is the top priority, but the quality will noticeably decrease.";
-            } else if (preset === 'ultrafast') {
-                description = "Fast Conversion (ultrafast):\n" +
-                              "This preset will encode the audio as quickly as possible, but with significant quality loss. Use this option when encoding speed is a priority over quality.";
-            }
-
-            document.getElementById('preset-description').textContent = description;
-        }
-
-        // Show the description of the multiple files conversion option
-        function showMultipleFilesDescription(option) {
-            let description = '';
-
-            if (option === 'multiple-files') {
-                description = "Batch Conversion (More than 100 files):\n" +
-                              "With this feature, you can convert over 100 audio files at once, streamlining your batch processing tasks. Whether you're converting a large collection of music or audio files for a project, this feature will save you significant time.";
-            }
-
-            document.getElementById('multiple-files-description').textContent = description;
-        }
-
-        // Close the modal
-        function closeModal() {
-            document.getElementById('preset-dropdown').style.display = 'none';
-            document.getElementById('multiple-files-dropdown').style.display = 'none';
-        }
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
