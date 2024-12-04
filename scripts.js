@@ -1,22 +1,22 @@
 // Show the preset section when the feature box is clicked
 function showPresetDetails() {
-    document.getElementById('preset-section').style.display = 'block';
-    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section if preset is clicked
-    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message if preset is clicked
+    document.getElementById('preset-section').style.display = 'block'; // Show preset section
+    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section
+    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message
 }
 
 // Show the Multiple Files Conversion section
 function showMultipleFilesDetails() {
-    document.getElementById('multiple-files-section').style.display = 'block';
-    document.getElementById('preset-section').style.display = 'none'; // Hide preset section if multiple files section is clicked
-    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message if multiple files section is clicked
+    document.getElementById('multiple-files-section').style.display = 'block'; // Show multiple files section
+    document.getElementById('preset-section').style.display = 'none'; // Hide preset section
+    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message
 }
 
 // Show the Solo Dev message when clicked
 function showSoloDevMessage() {
-    document.getElementById('solo-dev-message').style.display = 'block';
-    document.getElementById('preset-section').style.display = 'none'; // Hide preset section if solo dev message is clicked
-    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section if solo dev message is clicked
+    document.getElementById('solo-dev-message').style.display = 'block'; // Show solo dev message
+    document.getElementById('preset-section').style.display = 'none'; // Hide preset section
+    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section
 }
 
 // Show the description of the selected preset
@@ -49,6 +49,7 @@ function showPresetDescription(preset) {
         description = "Please select a speed option from the dropdown.";
     }
 
+    // Update the preset description area dynamically
     document.getElementById('preset-description').textContent = description;
 }
 
@@ -64,5 +65,6 @@ function showMultipleFilesDescription(option) {
         description = "Please select a multiple files option.";
     }
 
+    // Update the multiple files description dynamically
     document.getElementById('multiple-files-description').textContent = description;
 }
