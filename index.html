@@ -25,64 +25,56 @@
         <section class="features">
             <h2>Key Features</h2>
             <div class="feature-box">
-                <!-- New Feature Box: Best Audio Quality With Best Speed -->
-                <div class="feature-card" onclick="showPresetDetails()">
+                <div class="feature-card" onclick="showModal('audio-quality')">
                     <h3>Best Audio Quality With Best Speed Available</h3>
-                    <p class="feature-description">Choose from presets for the best audio, speed, and balance for your audio files.</p>
+                    <p class="feature-description">We have presets for conversion: Best Speed, Best Audio Quality, Balanced and more.</p>
                 </div>
-            </div>
-
-            <!-- New Feature Box: Multiple Files Conversion -->
-            <div class="feature-box">
-                <div class="feature-card" onclick="showMultipleFilesDetails()">
-                    <h3>Convert Multiple Files (More Than 100)</h3>
-                    <p class="feature-description">Easily convert over 100 audio files at once, saving you time and effort.</p>
+                <div class="feature-card" onclick="showModal('batch-conversion')">
+                    <h3>Convert 100+ Files at Once</h3>
+                    <p class="feature-description">Convert more than 100 files in one go, saving you time and effort.</p>
                 </div>
-            </div>
-
-            <!-- New Feature Box: Solo Dev -->
-            <div class="feature-box">
-                <div class="feature-card" onclick="showSoloDevMessage()">
+                <div class="feature-card" onclick="showModal('solo-dev')">
                     <h3>Solo Dev</h3>
-                    <p class="feature-description">A personal message from the creator</p>
+                    <p class="feature-description">A personal touch from the developer for a smooth experience.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Presets Section (Hidden initially, revealed when feature box clicked) -->
-        <section id="preset-section" class="preset-section" style="display: none;">
-            <h3>Conversion Presets</h3>
-            <ul>
-                <li onclick="showPresetDescription('veryslow')">Best Audio Quality (veryslow)</li>
-                <li onclick="showPresetDescription('slow')">High Quality (slow)</li>
-                <li onclick="showPresetDescription('medium')">Balanced (medium)</li>
-                <li onclick="showPresetDescription('fast')">Faster Conversion (fast)</li>
-                <li onclick="showPresetDescription('faster')">Very Fast Conversion (faster)</li>
-                <li onclick="showPresetDescription('ultrafast')">Fast Conversion (ultrafast)</li>
-            </ul>
-            <div id="preset-description"></div>
+        <!-- Contact Button Section -->
+        <section class="contact-section">
+            <button onclick="window.location.href='contact.html'">Contact Us</button>
         </section>
 
-        <!-- Multiple Files Conversion Section (Hidden initially, revealed when clicked) -->
-        <section id="multiple-files-section" class="multiple-files-section" style="display: none;">
-            <h3>Multiple Files Conversion</h3>
-            <ul>
-                <li onclick="showMultipleFilesDescription('multiple-files')">Batch Conversion (More than 100 files)</li>
-            </ul>
-            <div id="multiple-files-description"></div>
-        </section>
-
-        <!-- Solo Dev Message Section (Hidden initially, revealed when clicked) -->
-        <section id="solo-dev-message" class="solo-dev-message" style="display: none;">
-            <h3>A Sweet Message from the Creator</h3>
-            <p>Thank you for using the Audio Converter App! Your support means the world to me. As a solo developer, I put my heart into creating this app, and I hope it helps you convert your audio files with ease. Enjoy, and feel free to reach out if you have any suggestions or feedback. Stay awesome!</p>
-        </section>
-
-        <!-- Call to Action Section -->
+        <!-- Call to Action -->
         <section class="cta">
             <h2>Ready to get started?</h2>
             <button onclick="showAlert()">Download Now</button>
         </section>
+    </div>
+
+    <!-- Modal Popups -->
+    <div id="audio-quality-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('audio-quality')">&times;</span>
+            <h3>Best Audio Quality With Best Speed Available</h3>
+            <p>We have presets for conversion: Best Speed, Best Audio Quality, Balanced and more.</p>
+        </div>
+    </div>
+
+    <div id="batch-conversion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('batch-conversion')">&times;</span>
+            <h3>Convert 100+ Files at Once</h3>
+            <p>This feature allows you to convert more than 100 files at once, saving time and increasing productivity.</p>
+        </div>
+    </div>
+
+    <div id="solo-dev-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('solo-dev')">&times;</span>
+            <h3>Solo Dev</h3>
+            <p>A small message from me, the developer: I created this app with care and dedication to provide you with the best experience. I hope you enjoy using it!</p>
+        </div>
     </div>
 
     <script src="scripts.js"></script>
