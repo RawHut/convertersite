@@ -2,12 +2,21 @@
 function showPresetDetails() {
     document.getElementById('preset-section').style.display = 'block';
     document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section if preset is clicked
+    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message if preset is clicked
 }
 
 // Show the Multiple Files Conversion section
 function showMultipleFilesDetails() {
     document.getElementById('multiple-files-section').style.display = 'block';
     document.getElementById('preset-section').style.display = 'none'; // Hide preset section if multiple files section is clicked
+    document.getElementById('solo-dev-message').style.display = 'none'; // Hide solo dev message if multiple files section is clicked
+}
+
+// Show the Solo Dev message when clicked
+function showSoloDevMessage() {
+    document.getElementById('solo-dev-message').style.display = 'block';
+    document.getElementById('preset-section').style.display = 'none'; // Hide preset section if solo dev message is clicked
+    document.getElementById('multiple-files-section').style.display = 'none'; // Hide multiple files section if solo dev message is clicked
 }
 
 // Show the description of the selected preset
