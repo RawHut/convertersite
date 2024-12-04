@@ -10,6 +10,7 @@ body {
   background-color: #121212;
   color: #eaeaea;
   line-height: 1.6;
+  padding-top: 80px; /* Adjusts for fixed header */
 }
 
 /* Header Section */
@@ -21,6 +22,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  width: 100%;
 }
 
 nav {
@@ -61,7 +63,6 @@ nav ul li a:hover {
   color: #fff;
   text-align: center;
   padding: 100px 20px;
-  margin-top: 80px;
 }
 
 #get-started-hero .hero-content h1 {
@@ -106,6 +107,7 @@ nav ul li a:hover {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left within each step */
 }
 
 .instruction-step h3 {
@@ -126,4 +128,5 @@ footer {
   text-align: center;
   padding: 20px;
   color: #eaeaea;
+  margin-top: 40px;
 }
