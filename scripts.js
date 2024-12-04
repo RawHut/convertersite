@@ -42,3 +42,18 @@ function showPresetDescription(preset) {
 
     document.getElementById('preset-description').textContent = description;
 }
+
+// Show the description of the multiple files conversion option
+function showMultipleFilesDescription(option) {
+    let description = '';
+
+    if (option === 'multiple-files') {
+        description = "Batch Conversion (More than 100 files):\n" +
+                      "With this feature, you can convert over 100 audio files at once, streamlining your batch processing tasks. " +
+                      "Whether you're converting a large collection of music or audio files for a project, this feature will save you significant time.";
+    } else {
+        description = "Please select a multiple files option.";
+    }
+
+    document.getElementById('multiple-files-description').textContent = description;
+}
