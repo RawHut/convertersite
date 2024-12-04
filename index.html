@@ -37,6 +37,10 @@
                     <h3>Multiple Formats</h3>
                     <p class="feature-description">Convert between various audio formats, including MP3 , FLAC , WAV , WMA , AAC , OGG , AIFF , Opus and more.</p>
                 </div>
+                <div class="feature-card" onclick="showModal('batch-conversion')">
+                    <h3>Batch Conversion</h3>
+                    <p class="feature-description">Convert hundreds of audio files at once to save time.</p>
+                </div>
             </div>
         </section>
 
@@ -87,6 +91,19 @@
                 <li>OGG</li>
                 <li>AIFF</li>
                 <li>Opus</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="batch-conversion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('batch-conversion')">&times;</span>
+            <h3>Batch Conversion</h3>
+            <p>This feature allows you to convert multiple audio files at the same time, making it easier and faster to handle large batches of audio files.</p>
+            <ul>
+                <li>Convert hundreds of files at once</li>
+                <li>Save time by processing multiple files simultaneously</li>
+                <li>Efficient for large audio libraries</li>
             </ul>
         </div>
     </div>
