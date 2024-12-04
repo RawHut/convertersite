@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Converter</title>
+    <title>Audio Converter App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,15 +14,15 @@
             <p class="subheading">Convert audio files with ease and speed</p>
         </header>
 
-        <!-- Contact Button (Green Box) -->
-        <section class="contact-section">
-            <button onclick="window.location.href='contact.html'" class="contact-btn">Contact Us</button>
-        </section>
+        <!-- Contact Button (top right) -->
+        <div class="contact-btn">
+            <button onclick="window.location.href='contact.html'">Contact</button>
+        </div>
 
         <!-- Image Section -->
         <section class="gallery">
             <div class="image-container">
-                <img src="img1.jpg" alt="App Screenshot 1" class="gallery-image">
+                <img src="img1.jpg" alt="App Screenshot" class="gallery-image">
             </div>
         </section>
 
@@ -30,17 +30,17 @@
         <section class="features">
             <h2>Key Features</h2>
             <div class="feature-box">
-                <div class="feature-card" onclick="showModal('audio-quality')">
-                    <h3>Best Audio Quality With Best Speed Available</h3>
-                    <p class="feature-description">We have presets for conversion: Best Speed, Best Audio Quality, Balanced and more.</p>
+                <div class="feature-card" onclick="showPresetDetails()">
+                    <h3>Best Audio Quality with Best Speed Available</h3>
+                    <p>This section shows presets for best quality and speed.</p>
                 </div>
-                <div class="feature-card" onclick="showModal('batch-conversion')">
-                    <h3>Convert 100+ Files at Once</h3>
-                    <p class="feature-description">Convert more than 100 files in one go, saving you time and effort.</p>
+                <div class="feature-card" onclick="showMultipleFilesDetails()">
+                    <h3>Batch Conversion (100+ Files)</h3>
+                    <p>Convert multiple files at once, saving time!</p>
                 </div>
-                <div class="feature-card" onclick="showModal('solo-dev')">
-                    <h3>Solo Dev</h3>
-                    <p class="feature-description">A personal touch from the developer for a smooth experience.</p>
+                <div class="feature-card" onclick="showSoloDevMessage()">
+                    <h3>Message from Solo Dev</h3>
+                    <p>A special message just for you.</p>
                 </div>
             </div>
         </section>
@@ -48,35 +48,122 @@
         <!-- Call to Action -->
         <section class="cta">
             <h2>Ready to get started?</h2>
-            <button onclick="showAlert()">Download Now</button>
+            <button onclick="window.location.href='download.html'">Download Now</button>
         </section>
     </div>
 
-    <!-- Modal Popups -->
-    <div id="audio-quality-modal" class="modal">
+    <!-- Preset Details Section -->
+    <section id="preset-section" style="display:none;">
+        <h3>Preset Details</h3>
+        <p id="preset-description">Please select a preset to see the description.</p>
+    </section>
+
+    <!-- Multiple Files Conversion Section -->
+    <section id="multiple-files-section" style="display:none;">
+        <h3>Multiple Files Conversion</h3>
+        <p id="multiple-files-description">Please select an option to see the description.</p>
+    </section>
+
+    <!-- Solo Dev Message Section -->
+    <section id="solo-dev-message" style="display:none;">
+        <h3>Message from Solo Dev</h3>
+        <p>Thank you for using our app. We hope it helps you with your audio conversion needs!</p>
+    </section>
+
+    <!-- Modal Popup for Selecting Preset -->
+    <div id="preset-dropdown" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('audio-quality')">&times;</span>
-            <h3>Best Audio Quality With Best Speed Available</h3>
-            <p>We have presets for conversion: Best Speed, Best Audio Quality, Balanced and more.</p>
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Select Preset</h3>
+            <select onchange="showPresetDescription(this.value)">
+                <option value="veryslow">Best Audio Quality (veryslow)</option>
+                <option value="slow">High Quality (slow)</option>
+                <option value="medium">Balanced (medium)</option>
+                <option value="fast">Faster Conversion (fast)</option>
+                <option value="faster">Very Fast Conversion (faster)</option>
+                <option value="ultrafast">Fast Conversion (ultrafast)</option>
+            </select>
+            <p id="preset-description">Select a preset to see the details.</p>
         </div>
     </div>
 
-    <div id="batch-conversion-modal" class="modal">
+    <!-- Modal Popup for Batch Conversion -->
+    <div id="multiple-files-dropdown" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('batch-conversion')">&times;</span>
-            <h3>Convert 100+ Files at Once</h3>
-            <p>This feature allows you to convert more than 100 files at once, saving time and increasing productivity.</p>
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Select Batch Conversion Option</h3>
+            <p>Convert more than 100 files in a single batch. Select the batch conversion option for more details.</p>
+            <p id="multiple-files-description">Batch conversion allows you to convert multiple audio files at once, saving you time.</p>
         </div>
     </div>
 
-    <div id="solo-dev-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('solo-dev')">&times;</span>
-            <h3>Solo Dev</h3>
-            <p>A small message from me, the developer: I created this app with care and dedication to provide you with the best experience. I hope you enjoy using it!</p>
-        </div>
-    </div>
+    <script>
+        // Show the preset section when the feature box is clicked
+        function showPresetDetails() {
+            document.getElementById('preset-section').style.display = 'block';
+            document.getElementById('multiple-files-section').style.display = 'none';
+            document.getElementById('solo-dev-message').style.display = 'none';
+        }
 
-    <script src="scripts.js"></script>
+        // Show the Multiple Files Conversion section
+        function showMultipleFilesDetails() {
+            document.getElementById('multiple-files-section').style.display = 'block';
+            document.getElementById('preset-section').style.display = 'none';
+            document.getElementById('solo-dev-message').style.display = 'none';
+        }
+
+        // Show the Solo Dev message when clicked
+        function showSoloDevMessage() {
+            document.getElementById('solo-dev-message').style.display = 'block';
+            document.getElementById('preset-section').style.display = 'none';
+            document.getElementById('multiple-files-section').style.display = 'none';
+        }
+
+        // Show the description of the selected preset
+        function showPresetDescription(preset) {
+            let description = '';
+
+            if (preset === 'veryslow') {
+                description = "Best Audio Quality (veryslow):\n" +
+                              "This preset provides the best audio quality with the slowest encoding time. The file size will be smaller and the quality will be top-notch, but the conversion will be slow.";
+            } else if (preset === 'slow') {
+                description = "High Quality (slow):\n" +
+                              "This preset is still focused on high quality but with a faster encoding time than 'veryslow'. It provides excellent audio quality, though encoding will be slower than other options.";
+            } else if (preset === 'medium') {
+                description = "Balanced (medium):\n" +
+                              "This is the default preset, providing a good balance between encoding speed and audio quality. It’s suitable for most scenarios where you need a fair balance between file size and quality.";
+            } else if (preset === 'fast') {
+                description = "Faster Conversion (fast):\n" +
+                              "This preset sacrifices some quality for faster encoding times. The result will be faster, but the audio quality may suffer slightly.";
+            } else if (preset === 'faster') {
+                description = "Very Fast Conversion (faster):\n" +
+                              "This preset is geared towards ultra-fast encoding. It’s suitable when speed is the top priority, but the quality will noticeably decrease.";
+            } else if (preset === 'ultrafast') {
+                description = "Fast Conversion (ultrafast):\n" +
+                              "This preset will encode the audio as quickly as possible, but with significant quality loss. Use this option when encoding speed is a priority over quality.";
+            }
+
+            document.getElementById('preset-description').textContent = description;
+        }
+
+        // Show the description of the multiple files conversion option
+        function showMultipleFilesDescription(option) {
+            let description = '';
+
+            if (option === 'multiple-files') {
+                description = "Batch Conversion (More than 100 files):\n" +
+                              "With this feature, you can convert over 100 audio files at once, streamlining your batch processing tasks. Whether you're converting a large collection of music or audio files for a project, this feature will save you significant time.";
+            }
+
+            document.getElementById('multiple-files-description').textContent = description;
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('preset-dropdown').style.display = 'none';
+            document.getElementById('multiple-files-dropdown').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
