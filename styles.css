@@ -11,6 +11,13 @@ body {
   color: #eaeaea; /* Light text color */
   line-height: 1.6;
 }
+/* W3C CSS Validator Badge */
+#css-validator {
+  position: fixed;
+  bottom: 20px; /* Adjust this value for desired vertical spacing */
+  right: 20px;  /* Adjust this value for desired horizontal spacing */
+  z-index: 100;
+}
 /* General Styles for the Get Started Page */
 #download {
   padding: 60px 20px;
