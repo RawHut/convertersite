@@ -1,9 +1,2 @@
-// Optional: Smooth scrolling for anchor links
-document.querySelectorAll('a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+
+AOS.init({ duration: 1000, once: true });
