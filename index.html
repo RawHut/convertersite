@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audio Format Converter</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">Audio Converter</div>
-    <nav>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#presets">Presets</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win Duster Audio Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content" data-aos="fade-down">
+        <h1>Win Duster Audio Converter</h1>
+        <p>Elegant. Powerful. Lightning-fast audio conversion with advanced control.</p>
+        <a href="#" class="btn" onclick="showAbout()">Wait... It’s not ready. Learn why →</a>
+      </div>
+    </header>
+
+    <section class="features" data-aos="fade-up">
+      <h2>What It Can Do</h2>
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-broom"></i>
+          <h3>Temp File Cleaner</h3>
+          <p>Cleans cluttered system and audio temp files before conversion.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-microchip"></i>
+          <h3>HDD Defrag / SSD Trim</h3>
+          <p>Preps your system for efficient audio read/write access.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-wifi"></i>
+          <h3>WiFi Optimization</h3>
+          <p>Ensures network operations don’t interfere with batch jobs.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-headphones"></i>
+          <h3>Multi-Format Conversion</h3>
+          <p>Supports WAV, MP3, FLAC, AAC, Opus, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" data-aos="zoom-in">
+      <h2>Sneak Peek</h2>
+      <div class="carousel">
+        <img src="screenshot1.png" alt="App Screenshot 1" />
+        <img src="screenshot2.png" alt="App Screenshot 2" />
+        <img src="screenshot3.png" alt="App Screenshot 3" />
+      </div>
+    </section>
+
+    <section class="formats" data-aos="fade-up">
+      <h2>Supported Formats</h2>
+      <ul class="formats-list">
+        <li>WAV</li>
+        <li>MP3</li>
+        <li>FLAC</li>
+        <li>WMA</li>
+        <li>AAC</li>
+        <li>OGG</li>
+        <li>AIFF</li>
+        <li>Opus</li>
       </ul>
-    </nav>
-  </header>
+    </section>
 
-  <section class="hero" id="hero">
-    <h1 data-aos="fade-up">Convert Audio with Precision</h1>
-    <p data-aos="fade-up" data-aos-delay="100">Fast. Flexible. Format-friendly audio conversion made easy.</p>
-    <a href="#features" class="cta-button" data-aos="zoom-in" data-aos-delay="200">Explore Features</a>
-  </section>
+    <section class="about" id="about" data-aos="fade-up">
+      <h2>Why It's Not Ready</h2>
+      <p>
+        We’re polishing every byte. From thread-handling to hardware trimming,
+        this isn’t just a converter — it’s an experience. Meanwhile, your
+        curiosity fuels us. Stay tuned!
+      </p>
+    </section>
 
-  <section id="features">
-    <h2 data-aos="fade-right">Features</h2>
-    <div class="feature-grid">
-      <div class="feature-card" data-aos="fade-up">
-        <h3>Fast Conversion</h3>
-        <p>Batch process multiple audio files at once with blazing speed.</p>
-      </div>
-      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Multi-Format Support</h3>
-        <p>Handles MP3, FLAC, WAV, AAC, Opus, AIFF, WMA, and more.</p>
-      </div>
-      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Custom Quality Options</h3>
-        <p>Choose from six quality presets from ultrafast to veryslow.</p>
-      </div>
-    </div>
-  </section>
+    <footer>
+      <p>© 2025 Win Duster by Adit. All rights reserved.</p>
+    </footer>
 
-  <section id="presets">
-    <h2 data-aos="fade-left">Presets</h2>
-    <div class="preset-grid">
-      <div class="preset-card" data-aos="flip-left"><h3>Very Slow</h3><p>Highest quality output, slowest encoding time.</p></div>
-      <div class="preset-card" data-aos="flip-left" data-aos-delay="100"><h3>Slow</h3><p>Excellent quality with reasonable encoding speed.</p></div>
-      <div class="preset-card" data-aos="flip-left" data-aos-delay="200"><h3>Medium</h3><p>Balanced performance for most use cases.</p></div>
-      <div class="preset-card" data-aos="flip-left" data-aos-delay="300"><h3>Fast</h3><p>Fast encoding with decent quality.</p></div>
-      <div class="preset-card" data-aos="flip-left" data-aos-delay="400"><h3>Faster</h3><p>Speed prioritized, quality slightly reduced.</p></div>
-      <div class="preset-card" data-aos="flip-left" data-aos-delay="500"><h3>UltraFast</h3><p>Maximum speed, quality loss expected.</p></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 data-aos="fade-up">About</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Audio Format Converter is developed by a solo developer with a mission to provide simple yet powerful audio conversion tools accessible on any device.</p>
-  </section>
-
-  <section id="contact">
-    <h2 data-aos="fade-right">Contact</h2>
-    <p data-aos="fade-up"><a href="contact.html" class="cta-button">Go to Contact Page</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Audio Format Converter. All rights reserved.</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="scripts.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+      function showAbout() {
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
 </html>
